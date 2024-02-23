@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>owned apartments +-</title>
+        <link rel="stylesheet" href="/static/apartment.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+        <div class="logo"><img src="/static/img/logo.jpeg" alt="logo"> <a href="/"><h1 id="name">Rent Apartment</h1></a> </div>
+        <ul>
+            <li><a href="/owner">Home</a></li>
+            <li><a href="/apartment">My Apartments</a></li>
+            <li><a href="/tenants">Tenants</a></li>
+        </ul>
+        <div class="user-name">Hi,{{username}}</div>
+     </nav>
+     <div class="addapartment">
+        <span class="text">Add Apartment 
+        </span> <a href="/addapartment">
+     <div class="plus"> <i class="bi bi-plus-circle-fill"></i></div>
+     </a></div>
+     </div>
+        {{#each data}}
+     <div class="box">
+        <img src={{this.imagepath}} alt="apartment image">
+        <div class="content">
+
+
+            <form action="/delete/apartment" method="post">
+            <button type="submit" name=apartmentid class="bin" value={{this.apartmentid}}>
+            <i class="bi bi-trash3-fill"></i>
+            </button>
+            </form>
+
+
+
+            <div>Location:{{this.location}}</div>
+            <div>Monthly Payment:{{this.monthlypayment}}</div>
+            <div>Building Name:{{this.building}}</div>
+            <div>Apartment Size:{{this.apartmentsize}}</div>
+        </div>
+     </div>
+        {{/each}}
+         <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+    </body>
+</html>

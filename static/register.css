@@ -1,0 +1,124 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+body {
+    background-color: #f1f5f8;
+    font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
+    color: #2b3e51;
+  }
+  
+  h2 {
+    font-weight: 300;
+    color: #2b3e51;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .register-box{
+    background-color: white;
+    width:60% ;
+    height: 110vh;
+    text-align: center;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px grey;
+  }
+  input{
+      outline: none;
+      border:1px solid rgb(111, 110, 110);
+      margin: 0.5rem;
+      height: 3.0rem;
+      width: 80%;
+    border-radius: 5px;
+    }
+    
+input[type="radio"]{
+    margin: 20px;
+    margin-top: 30px;
+    padding: 0px;
+    width: 10%;
+    height: 30px;
+    }
+    .text-margin
+    {
+        padding: 20px 10px;
+        font-size: 1rem;
+    }
+    .submit-button{
+        cursor: pointer;
+        margin: 0px auto;
+        margin-top: 30px;
+        padding: 20px 40px;
+        margin-bottom: 30px;
+        text-align: center;
+       background-color: #3ca9e2;
+       color: white;
+       border: none;
+       width: 70%;
+       height: 60px;
+       border-radius: 5px;
+       font-weight: bold;
+       font-size: large;
+    }
+    .submit-button:hover{
+        background-color: #329dd5;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    }
+    .carte {
+        height: 0px;
+        width: 0px;
+        position: relative;
+        left: 569px;
+        bottom: 63px;
+        border-top: 10px solid white;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: none;
+    }
+    .carte-rotate{
+        transform: rotate(180deg);
+    }
+    .dropdown{
+        margin-top: -40px;
+        height: 100px;
+        transition: all 1s ease;
+    }
+   .container{
+    height: 40px;
+   }
+   .v-class{
+    opacity: 0;
+    height: 0px;
+   }
+   button{
+    padding: 10px 40px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+       font-size: large;
+    width: 65%;
+    background-color: white;
+    color: black;
+   }
+   button:hover{
+    background-color: #3ca9e2;
+    color: white;
+   }
+   footer{
+    background-color: #077BCD;
+    width: 100%;
+    text-align: center;
+    padding: 4px 10px;
+}
+footer span{
+    position: absolute;
+    right: 3px;
+}

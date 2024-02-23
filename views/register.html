@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/static/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="register-box">
+        <h2>Register</h2>
+        <form action="/login/register" method="post" enctype="multipart/form-data">
+
+            <div>
+            
+                <input type="text" class="text-margin" name="name" placeholder="Enter name">
+            </div>
+            <div>
+
+                <input type="email" class="text-margin" name="email" placeholder="Enter Email">
+            </div>
+            <div>
+
+                <input type="password" class="text-margin" name="password" placeholder="Enter Password">
+            </div>
+            <div>
+
+                <input type="number" class="text-margin" name="phone_number" placeholder="Enter phone number">
+            </div>
+            <div>
+
+                <input type="text" class="text-margin" name="age" id="age" placeholder="Enter age">
+            </div>
+            <div style="padding: 10px;">
+                  <h3>Input Your Profile Image</h3>
+                <input style="padding: 10px; background-color: gainsboro;font-weight: bold;" type="file" class="text-margin" name="imagepath" >
+            </div>
+            <div id="gender-box">
+
+                Male
+                <input type="radio" name="gender" value="Male">
+                Female
+                <input type="radio" name="gender" value="Female">
+                Other
+                <input type="radio" name="gender" value="other">
+            </div>
+            <div >
+                <h3 class="submit-button">Submit</h3>
+                <div class="carte"></div>
+            </div>
+                <div class="dropdown v-class">
+                    <div><button type="submit" name="type" class="container" value="owner">OWNER</button></div>
+                    <div><button type="submit" name="type" class="container" value="tenant">TENANT</button></div>
+                </div>
+      </form>
+
+    </div>
+    <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+    <script>
+        let dropdown=document.querySelector(".dropdown");
+        let carte=document.querySelector('.carte');
+        let submit=document.querySelector(".submit-button");
+        submit.addEventListener('mouseover',()=>{
+               dropdown.classList.toggle('v-class');
+               carte.classList.toggle('carte-rotate');
+        })
+    </script>
+</body>
+</html>

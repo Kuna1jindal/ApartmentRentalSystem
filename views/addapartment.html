@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Apartment</title>
+    <link rel="stylesheet" href="/static/addapartment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div  class="container">
+        <h1>Add Apartment</h1>
+        <form action="/addapartment" method="post" enctype="multipart/form-data" class="content">
+            <div>
+                <input type="text" name="location" placeholder="Enter street and City">
+            </div>
+            <div>
+                <input type="text" name="monthlypayment" placeholder="Enter Monthly Rent">
+            </div>
+            <div>
+                <input type="text" name="building" placeholder="Enter Building Name">
+            </div>
+            <div>
+                <input type="text" name="apartmentsize" placeholder="Enter Size of the Apartment">
+            </div>
+            <div>
+                <div id="upload">Upload Apartment Image</div>
+                <input type="file" name="imagepath">
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+</body>
+</html>

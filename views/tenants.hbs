@@ -1,0 +1,58 @@
+<html>
+    <head>
+     <title>Owner-page</title>
+     <link rel="stylesheet" href="/static/owner.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/apartment.css">
+<style>
+    .box{
+        height: 370px;
+        padding: 20px;
+    }
+    .box:hover{
+         height: 380px;
+         box-shadow: 0 20px 30px 0 rgba(59, 50, 50, 0.329);
+    }
+    .box img{
+        height: 270px;
+        width: 370px;
+    }
+
+</style>
+    </head>
+    <body>
+     <nav>
+        <div class="logo"><img src="/static/img/logo.jpeg" alt="logo"> <a href="/"> <h1 id="name">Rent Apartment</h1></a></div>
+        <ul>
+            <li><a href="/owner">Home</a></li>
+            <li><a href="/apartment">My Apartments</a></li>
+            <li><a href="/tenants">Tenants</a></li>
+        </ul>
+        <div class="user-name">Hi,{{name}}</div>
+     </nav>
+         <section class="showapartment">
+        {{#each data}}
+        <div class="box">
+            <img src={{this.imagepath}} alt="use-image">
+            <div class="content" style="font-weight: bold;">
+                <div>Name:{{this.name}}</div>
+                <div>Age:{{this.age}}</div>
+                <div>Phonenumber:{{this.phone_number}}</div>
+                <div>Email:{{this.email}}</div>
+                <div>Gender:{{this.gender}}</div>
+                <div>Apartmentid:{{this.apartmentid}}</div>
+            </div>
+        </div>
+      {{/each}}
+    </section>
+         <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+    </body>
+</html>

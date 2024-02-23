@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/static/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<style>
+    .ques{
+        color: rgba(0, 179, 255, 0.858);
+        border:2px solid black ;
+        width: 100%;
+        padding: 8px;
+        text-align: left;
+    }
+    h2{
+        font-weight: bold;
+        color:rgba(241, 97, 20, 0.898);
+    }
+    .inline{
+        display: flex;
+       
+    }
+    .register-box{
+        width: 70%;
+        height: 90vh;
+    }
+    input{
+           text-align: center;
+           margin: 21px;
+           margin-left: 108px;
+
+    }
+    .input{
+        width: 68.4%;
+        margin: 0px auto;
+        border:2px solid black ;
+        position: relative;
+        bottom:298px;
+    }
+    .submit-button {
+    position: relative;
+    width: 62%;
+    bottom: 282px;
+    left: 239px;
+}
+h4{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+</style>
+</head>
+<body>
+    <div class="register-box">
+        <h2>Rental Agreement Form</h2>
+        <form action="/actualbuy" method="post">
+            <div class="inline">
+               <div class="ques">Apartment Size:{{apartmentsize}}</div>    
+           
+            <div class="ques"> Data of Join:{{date_of_join}}</div>
+            
+           </div>
+           <div class="inline">
+            <div class="ques">Tenant Name:{{name}}</div>
+          
+            <div class="ques">Tenant ID:{{email}}</div>
+           </div>
+           <div class="inline">
+            <div class="ques">Owner ID:{{ownerid}}</div>
+          
+            <div class="ques"> Location of Apartment:{{location}}</div>
+           </div>
+            <div class="ques">
+                monthlypayment:{{monthlypayment}}</div>
+           </div>
+           <div class="input">
+            <h4>Enter expected stay date</h4>
+                <input type="date" class="text-margin" name="outdate">
+           </div>
+            <div >
+                <button type="submit" class="submit-button">Buy Now</button>
+               
+            </div>  
+      </form>
+
+    </div>
+     <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+</body>
+</html>

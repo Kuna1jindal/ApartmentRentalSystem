@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>tenant profile</title>
+    <link rel="stylesheet" href="/static/apartment.css">
+    <style>
+        h1 {
+            color: #077BCD;
+            text-align: center;
+            margin: 20px;
+        }
+        .logout{
+            display: block;
+            position: absolute;
+            top: 140px;
+            left: 23px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 20px;
+            margin-top: -40px;
+            font-weight: bold;
+            background-color: #0b86dd;
+            border: none;
+        }
+        .logout a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+
+        }
+        
+    </style>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/tenant.css">
+</head>
+
+<body>
+   <nav>
+          <div class="logo">
+              <img src="../static/img/logo.jpeg" alt="logo">
+          </div>
+          <h1 class="webname">Rent Apartment</h1>
+           <div class="user">
+            <div class="username">{{name}}</div>
+          <div class="userprofile">
+             <a href="/tenant">
+                  <img style="width: 62px;
+    height: 60px;
+    position: relative;
+    border-radius: 74px;
+    top: -5px;
+    border:2px solid rgb(99, 97, 97);" src={{imgpath}} alt="image">
+              </a></div>
+              </div>
+      </nav>
+
+    <h1>Your Apartments</h1>
+        <button class="logout"><a href="/login">Logout</a></button>
+
+    {{#each apartmentdata}}
+    <div class="box">
+        <img src={{this.imagepath}} alt="apartment image">
+        <div class="content">
+            <div>Location: {{this.location}}</div>
+            <div>Monthly Payment: {{this.monthlypayment}}</div>
+            <div>Building Name: {{this.building}}</div>
+            <div>Apartment Size: {{this.apartmentsize}}</div>
+        </div>
+    </div>
+    {{/each}}
+    <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+
+</body>
+
+</html>

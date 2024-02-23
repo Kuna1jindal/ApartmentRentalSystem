@@ -1,0 +1,65 @@
+<html>
+
+  <head>
+      <title>Home page</title>
+      <link rel="stylesheet" href="../static/style.css">
+      <link rel="stylesheet" href="../static/tenant.css">
+  </head>
+  
+  <body>
+      <nav>
+          <div class="logo">
+              <img src="../static/img/logo.jpeg" alt="logo">
+          </div>
+          <h1 class="webname">Rent Apartment</h1>
+          
+
+           <div class="user">
+            <div class="username">{{name}}</div>
+          <div class="userprofile">
+             <a href="/tenantprofile">
+              <img style="width: 62px;
+    height: 60px;
+    position: relative;
+    border-radius: 74px;
+    top: -5px;
+    border:2px solid rgb(99, 97, 97);" src={{imgpath}} alt="image">
+
+              </a></div>
+              </div>
+      </nav>
+       <section class="toppage">
+       <h1>Rent Buy Sell your Apartment</h1>
+    </section>
+    <section class="sellers">
+        <h2>Our sellers</h2>
+        {{#each seller}}
+        <span><img src={{this.imagepath}} alt="seler image"></span>
+        {{/each}}
+    </section>
+      <section class="showapartment">
+          {{#each data}}
+          <div class="box">
+              <img src={{this.imagepath}} alt="apartment image">
+              <div class="content">
+                  <div>Location:{{this.location}}</div>
+                  <div>Monthly Payment:{{this.monthlypayment}}</div>
+                  <div>Building Name:{{this.building}}</div>
+                  <div>Apartment Size:{{this.apartmentsize}}</div>
+              </div>
+              <form action="/buynow" method="post">
+            <button class="btn" type="submit" name="apartment_id" value={{this.apartmentid}}>Buy Now</button>
+              </form>
+          </div>
+        {{/each}}
+      </section>
+       <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+  </body>
+
+</html>

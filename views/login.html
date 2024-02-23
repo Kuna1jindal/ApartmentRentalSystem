@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Login Form with validation Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="../static/login.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Login</h2>
+  <form id="login-form" action="/login" method="post">
+    <p>
+    <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="password" id="email" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <div >
+      <h3 class="submit-button">Log In</h3>
+      <div class="carte"></div>
+  </div>
+      <div class="dropdown v-class">
+          <div><button type="submit" name="type" class="container" value="owner">OWNER</button></div>
+          <div><button type="submit" name="type" class="container" value="tenant">TENANT</button></div>
+      </div>
+  </form>
+  <div id="create-account-wrap">
+    <p>Not a member? <a href="/login/register">Create Account</a><p>
+  </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+<!-- partial -->
+
+<script>
+  let dropdown=document.querySelector(".dropdown");
+  let carte=document.querySelector('.carte');
+  let submit=document.querySelector(".submit-button");
+  submit.addEventListener('click',()=>{
+         dropdown.classList.toggle('v-class');
+         carte.classList.toggle('carte-rotate');
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+    
+}
+body{
+    background-color: #f1f5f8;
+}
+  .toppage{
+    background: url("/static/img/image1.jpg") no-repeat center center/cover ;
+    filter: contrast(130%);
+    height: 30vh;
+  }
+  .toppage h1{
+    text-align: center;
+    color: #07a2cde0;
+    position: relative;
+    font-size: 3.5rem;
+    top: 107px;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+  }
+ 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #077BCD;
+    position: sticky;
+    height: 70px;
+    top: 0px;
+    z-index: 3;
+}
+.logo img{
+    height: 65px;
+    width: 65px;
+    border-radius: 200px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+.login a{
+    border: 2px solid white;
+    background-color: rgb(0, 89, 255);
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 23px;
+    right: 29px;
+    text-decoration: none;
+}
+.login a:hover{
+    background-color: rgb(32, 95, 211);
+
+}
+.webname{
+    font-size: 2.2rem;
+    color: white;
+}
+.sellers{
+    border: 2px solid white;
+    border-radius:8px;
+    margin: 40px;
+    background-color: white;
+}
+.sellers h2{
+    position: relative;
+    left: 10px;
+    color: #0889e5;
+}
+.sellers img{
+    border: 1px solid transparent;
+    border-radius: 100px;
+    margin: 5px;
+    padding: 5px;
+    height: 100px;
+    width: 110px;
+}
+/* .box{
+    border: 1px solid rgb(163, 159, 159);
+    padding: 10px;
+    margin: 20px;
+}
+.box img{
+    height: 400px;
+    width: 400px;
+} */
+footer{
+    background-color: #077BCD;
+    width: 100%;
+    text-align: center;
+    padding: 4px 10px;
+}
+footer span{
+    position: absolute;
+    right: 3px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="/static/apartment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+<body style="background-color:#f1f5f8;">
+    <nav>
+       <div class="logo">
+        <img src="../static/img/logo.jpeg" alt="logo">
+    </div>
+        <h1 class="webname">Rent Apartment</h1>
+        <div class="login"> <a href="/login">Login/Register</a></div>
+    </nav>
+    <section class="toppage">
+       <h1>Rent Buy Sell your Apartment</h1>
+    </section>
+    <section class="sellers">
+        <h2>Our sellers</h2>
+        {{#each seller}}
+        <span><img src={{this.imagepath}} alt="seler image"></span>
+        {{/each}}
+    </section>
+    <section class="showapartment">
+        {{#each data}}
+        <div class="box">
+            <img src={{this.imagepath}} alt="apartment image">
+            <div class="content">
+                <div>Location:{{this.location}}</div>
+                <div>Monthly Payment:{{this.monthlypayment}}</div>
+                <div>Building Name:{{this.building}}</div>
+                <div>Apartment Size:{{this.apartmentsize}}</div>
+            </div>
+        </div>
+      {{/each}}
+    </section>
+    <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+</body>
+</html>

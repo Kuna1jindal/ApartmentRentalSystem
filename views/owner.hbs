@@ -1,0 +1,61 @@
+<html>
+    <head>
+     <title>Owner-page</title>
+     <link rel="stylesheet" href="/static/owner.css">
+     <link rel="stylesheet" href="/static/style.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/apartment.css">
+    </head>
+    <body>
+     <nav>
+        <div class="logo"><img src="/static/img/logo.jpeg" alt="logo"> <a href="/"><h1 id="name">Rent Apartment</h1></a> </div>
+        <ul>
+            <li><a href="/owner">Home</a></li>
+            <li><a href="/apartment">My Apartments</a></li>
+            <li><a href="/tenants">Tenants</a></li>
+        </ul>
+        <div class="user-name" style="position: absolute;
+        top:30px;
+        right:73px;">Hi,{{name}}</div>
+         <img style="width: 62px;
+    height: 60px;
+    position: absolute;
+    border-radius: 74px;
+    top: 13px;
+    right:8px;
+    border:2px solid rgb(99, 97, 97);" src={{sellerimage}} alt="image">
+     </nav>
+      <section class="toppage">
+       <h1>Rent Buy Sell your Apartment</h1>
+    </section>
+    <section class="sellers">
+        <h2>Our sellers</h2>
+        {{#each seller}}
+        <span><img src={{this.imagepath}} alt="seller image"></span>
+        {{/each}}
+    </section>
+     <section class="showapartment">
+          {{#each data}}
+          <div class="box">
+              <img src={{this.imagepath}} alt="apartment image">
+              <div class="content">
+                  <div>Location:{{this.location}}</div>
+                  <div>Monthly Payment:{{this.monthlypayment}}</div>
+                  <div>Building Name:{{this.building}}</div>
+                  <div>Apartment Size:{{this.apartmentsize}}</div>
+              </div>
+          </div>
+        {{/each}}
+      </section>
+       <footer>
+        All Rights Reserved&copy; apartmentrentalsystem.com 
+        <span>
+        Developer:Kunal Jindal,kunalj.it.22@nitj.ac.in
+        </span> 
+        
+    </footer>
+    </body>
+</html>
